@@ -12,6 +12,9 @@
 
 // TODO: reference additional headers your program requires here
 #include <iostream>
+#include <iterator>
 #include <stdlib.h>
 #include <stdexcept>
+
+#include "Container.h"
 #include "Vector.h"
