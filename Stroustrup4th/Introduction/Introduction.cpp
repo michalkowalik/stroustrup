@@ -19,6 +19,9 @@ int main()
 
 	abstractClassUsage();
 
+	Vector v1 = { 1,2,3,4 };
+	badCopy(v1);
+
 	return 0;
 }
 
@@ -50,4 +53,17 @@ void use(Container& c)
 
 	for (int i = 0; i != sz; ++i)
 		cout << c[i] << endl;
+}
+
+
+// 3.3.1 Copying containers:
+
+
+void badCopy(Vector v1)
+{
+	Vector v2 = v1;
+	//v1[0] = 2;
+
+	cout << "v1[0]: " << v1[0] << endl;
+	cout << "v2[0]: " << v2[0] << endl;
 }

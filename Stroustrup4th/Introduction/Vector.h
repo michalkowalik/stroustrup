@@ -5,11 +5,18 @@ class Vector
 public:
 	Vector(int s);
 	Vector(std::initializer_list<double> lst);
+
+	// copy constructor:
+	Vector(const Vector& a);
+
+	// copy assignment:
+	Vector & operator=(const Vector& a);
+
 	~Vector();
 	double& operator[](int i);
 	int size();
 
-public:
+private:
 	double* elem;
 	int sz;
 };

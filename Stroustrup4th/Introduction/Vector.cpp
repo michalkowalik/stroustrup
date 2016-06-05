@@ -18,6 +18,25 @@ Vector::Vector(std::initializer_list<double> lst)
 		 stdext::checked_array_iterator<double*>(elem, lst.size()));
 }
 
+Vector::Vector(const Vector & a)
+	:elem{new double[sz]},
+	sz{a.sz}
+{
+	for (int i = 0; i != sz; ++i)
+		elem[i] = a.elem[i];
+}
+
+Vector & Vector::operator=(const Vector & a)
+{
+	double* p = new double[a.sz];
+	for (int i = 0; i != a.sz; ++i)
+		p[i] = a.elem[i];
+	delete[] elem;
+	elem = p;
+	sz = a.sz;
+	return *this;
+}
+
 Vector::~Vector()
 {
 	delete[] elem;
@@ -29,7 +48,8 @@ double & Vector::operator[](int i)
 	return elem[i];
 }
 
-int Vector::size()
+// Copy constructor:
+int Vector::size()	
 {
 	return sz;
 }
