@@ -19,7 +19,7 @@ Vector::Vector(std::initializer_list<double> lst)
 }
 
 Vector::Vector(const Vector & a)
-	:elem{new double[sz]},
+	:elem{new double[a.sz]},
 	sz{a.sz}
 {
 	for (int i = 0; i != sz; ++i)
@@ -39,6 +39,7 @@ Vector & Vector::operator=(const Vector & a)
 
 Vector::~Vector()
 {
+	cout << "Destroying vector, reported sz: "  << sz << endl;
 	delete[] elem;
 }
 

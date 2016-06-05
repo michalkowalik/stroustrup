@@ -62,8 +62,8 @@ void use(Container& c)
 void badCopy(Vector v1)
 {
 	Vector v2 = v1;
-	//v1[0] = 2;
+	v1[1] = 20;
 
-	cout << "v1[0]: " << v1[0] << endl;
-	cout << "v2[0]: " << v2[0] << endl;
+	for (int i = 0; i != v2.size(); ++i)
+		cout << v2[i] << endl;
 }
