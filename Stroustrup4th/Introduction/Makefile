@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-I. -Wall -std=gnu++11
 DEPS=stdafx.h
-OBJ=Introduction.o Vector.o User.o TemplateVector.o
+OBJ=Introduction.o Vector.o User.o 
 
 all: intro
 
