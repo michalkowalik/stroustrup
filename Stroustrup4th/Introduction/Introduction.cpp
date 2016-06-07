@@ -1,8 +1,7 @@
 // Introduction.cpp : Defines the entry point for the console application.
 //
-
 #include "stdafx.h"
-#include "Introduction.h"
+
 using namespace std;
 
 int main()
@@ -24,11 +23,12 @@ int main()
 	badCopy(v1);
 
 	cout << "Move containers:" << endl;
-
 	Vector z = moveContainers();
 
-	cout << endl << "Destructors at work:" << endl;
+	cout << "3.4.2. Templates" << endl;
+	useTemplates();
 
+	cout << endl << "Destructors at work:" << endl;
 	return 0;
 }
 
@@ -87,4 +87,14 @@ Vector moveContainers()
 	y = std::move(x);
 
 	return z;
+}
+
+// 3.4. - Templates:
+void useTemplates() 
+{
+	TemplateVector<char> vc(200);
+	TemplateVector<string> vs(16);
+	TemplateVector<list<int>> vli(45);
+
+	cout << "Initialized 3 instances of TemplateVector class" << endl;
 }
