@@ -12,6 +12,9 @@ public:
 	// copy assignment:
 	Vector & operator=(const Vector& a);
 
+	// move constructor:
+	Vector(Vector&& a);
+
 	~Vector();
 	double& operator[](int i);
 	int size();

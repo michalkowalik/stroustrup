@@ -15,7 +15,8 @@ Vector::Vector(std::initializer_list<double> lst)
 {
 	copy(lst.begin(),
 		 lst.end(),
-		 stdext::checked_array_iterator<double*>(elem, lst.size()));
+		 //stdext::checked_array_iterator<double*>(elem, lst.size()));
+		 elem);
 }
 
 Vector::Vector(const Vector & a)
@@ -35,6 +36,15 @@ Vector & Vector::operator=(const Vector & a)
 	elem = p;
 	sz = a.sz;
 	return *this;
+}
+
+// move constructor:
+Vector::Vector(Vector&& a)
+	:elem{a.elem},
+	 sz{a.sz}
+{
+	a.elem = nullptr;
+	a.sz = 0;
 }
 
 Vector::~Vector()
