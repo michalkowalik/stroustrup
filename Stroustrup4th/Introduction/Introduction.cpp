@@ -92,9 +92,17 @@ Vector moveContainers()
 // 3.4. - Templates:
 void useTemplates() 
 {
-	TemplateVector<char> vc(200);
-	TemplateVector<string> vs(16);
-	TemplateVector<list<int>> vli(45);
+	TemplateVector<char> vc(4);
+	//TemplateVector<string> vs(16);
+	//TemplateVector<list<int>> vli(45);
+	//
+	vc[0] = 'a';
+	vc[1] = 'B';
+	vc[2] = 'c';
+	vc[3] = 'D';
 
 	cout << "Initialized 3 instances of TemplateVector class" << endl;
+	
+	for(auto& s : vc)
+		cout << s << endl;
 }

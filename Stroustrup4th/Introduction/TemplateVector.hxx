@@ -28,3 +28,18 @@ int TemplateVector<T>::size() const
 {
 	return sz;
 }
+
+template<typename T>
+T* TemplateVector<T>::begin()
+{
+	return &elem[0];
+}
+
+template<typename T>
+T* TemplateVector<T>::end()
+{
+	return &elem[0] + sz;
+}
+
+
+

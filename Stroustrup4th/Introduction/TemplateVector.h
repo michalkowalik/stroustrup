@@ -13,6 +13,10 @@ public:
 	// copy and move operations:
 	T& operator[](int it) const;
 	int size() const;
+
+	// begin and end definitions:
+	T* begin();
+	T* end();
 };
 
 
