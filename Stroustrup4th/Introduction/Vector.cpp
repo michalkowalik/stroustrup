@@ -14,8 +14,8 @@ Vector::Vector(std::initializer_list<double> lst)
 {
 	copy(lst.begin(),
 		 lst.end(),
-		 //stdext::checked_array_iterator<double*>(elem, lst.size()));
-		 elem);
+		 stdext::checked_array_iterator<double*>(elem, lst.size()));
+		 //elem);
 }
 
 Vector::Vector(const Vector & a)

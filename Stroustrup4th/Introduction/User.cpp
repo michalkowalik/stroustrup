@@ -9,3 +9,5 @@ double sqrt_sum(Vector& v)
 		sum += sqrt(v[i]);
 	return sum;
 }
+
+// use template "sum":

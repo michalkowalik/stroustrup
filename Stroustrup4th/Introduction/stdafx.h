@@ -20,4 +20,7 @@
 #include "Container.h"
 #include "Vector.h"
 #include "TemplateVector.h"
+
+// too much fiddling needed to make it working
+//#include "FunctionTemplates.h"
 #include "Introduction.h"

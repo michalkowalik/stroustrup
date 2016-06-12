@@ -106,3 +106,13 @@ void useTemplates()
 	for(auto& s : vc)
 		cout << s << endl;
 }
+
+
+// use template sum:
+/*
+void templateSum(TemplateVector<int>& vi)
+{
+	int x = mySum(vi, 0);
+	cout << "sum of the vector: " << x << endl;
+}
+*/
